@@ -1,0 +1,10 @@
+@use '../../../scss/mixins.scss';
+
+.button {
+  @include mixins.button;
+  width: fit-content;
+
+  &--stretch {
+    width: 100%;
+  }
+}

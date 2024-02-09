@@ -1,0 +1,58 @@
+@use '../../scss/mixins.scss';
+@use '../../scss/variables.scss';
+
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 100px auto 0;
+  padding: 30px 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(variables.$main-color, 0.5);
+}
+
+.register__title {
+  @include mixins.h1;
+  margin-bottom: 25px;
+  color: variables.$main-color;
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+}
+
+.register__input {
+  width: 100%;
+}
+
+.register__input-error {
+  @include mixins.text;
+  margin-top: 5px;
+  font-size: 14px;
+  color: variables.$error-color;
+}
+
+.register__error {
+  @include mixins.text;
+  color: variables.$error-color;
+}
+
+.back__button {
+  padding: 9px 30px;
+  text-align: center;
+  color: variables.$content-color;
+  background-color: white;
+  border-radius: 10px;
+  border: 2px solid variables.$main-color;
+  display: block;
+  width: fit-content;
+}
+
+.register__buttons {
+  display: flex;
+  justify-content: space-between;
+}

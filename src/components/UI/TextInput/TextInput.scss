@@ -1,0 +1,15 @@
+@use '../../../scss/mixins.scss';
+@use '../../../scss/variables.scss';
+
+.text-input {
+  @include mixins.input-text;
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid variables.$main-color;
+  border-radius: 10px;
+
+  &::placeholder {
+    @include mixins.placeholder;
+    color: variables.$content-color;
+  }
+}

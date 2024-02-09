@@ -1,0 +1,41 @@
+@use '../../scss/mixins.scss';
+@use '../../scss/variables.scss';
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.statistics__title {
+  @include mixins.h1;
+  margin-bottom: 10px;
+  color: variables.$main-color;
+}
+
+.statistics__sort {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.statistics__table {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.statistics__pagination {
+  align-self: flex-end;
+}
+.statistics__error-message {
+  font-weight: 500;
+  font-size: 30px;
+  color: variables.$error-color;
+}
+.statistics__empty-message {
+  font-weight: 500;
+  font-size: 30px;
+  color: variables.$content-color;
+}

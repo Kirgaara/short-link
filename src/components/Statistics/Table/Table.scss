@@ -1,0 +1,78 @@
+@use '../../../scss/mixins.scss';
+@use '../../../scss/variables.scss';
+
+.table {
+  display: flex;
+  flex-direction: column;
+}
+
+.table__headers {
+  @include mixins.text;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 700;
+  color: variables.$content-color;
+}
+
+.table__row {
+  @include mixins.text;
+  display: flex;
+  align-items: center;
+  color: variables.$content-color;
+}
+
+.table__short {
+  width: 30%;
+  padding: 10px 10px;
+}
+
+.item {
+  @include mixins.text;
+  position: relative;
+
+  &:hover {
+    font-weight: bold;
+  }
+
+  &.copied:after {
+    @include mixins.text;
+    position: absolute;
+    top: 5px;
+    right: -155px;
+    display: block;
+    width: 190px;
+    content: 'Ссылка скопирована';
+    padding: 5px;
+    background-color: #fff;
+    border: 1px solid rgba(variables.$main-color, 0.5);
+    border-radius: 7px;
+    opacity: 0;
+    animation: 3s show-hide ease;
+  }
+}
+
+.table__target {
+  width: 60%;
+  padding: 10px 10px;
+}
+
+.table__counter {
+  width: 10%;
+  padding: 10px 10px;
+}
+
+@keyframes show-hide {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

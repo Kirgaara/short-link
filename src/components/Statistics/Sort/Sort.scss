@@ -1,0 +1,18 @@
+@use '../../../scss/mixins.scss';
+@use '../../../scss/variables.scss';
+
+.sort__title {
+  @include mixins.text;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: variables.$content-color;
+}
+
+.sort__select {
+  @include mixins.text;
+  padding: 5px;
+  font-size: 16px;
+  color: variables.$content-color;
+  border: 1px solid variables.$main-color;
+  border-radius: 5px;
+}

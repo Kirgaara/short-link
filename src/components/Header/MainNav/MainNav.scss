@@ -1,0 +1,16 @@
+@use '../../../scss/mixins.scss';
+@use '../../../scss/variables.scss';
+
+.main-nav__list {
+  display: flex;
+  gap: 30px;
+}
+
+.main-nav__link {
+  @include mixins.nav-text;
+  color: variables.$content-color;
+
+  &:not(&--disabled):hover {
+    color: variables.$main-color;
+  }
+}

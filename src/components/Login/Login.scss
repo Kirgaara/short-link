@@ -1,0 +1,42 @@
+@use '../../scss/mixins.scss';
+@use '../../scss/variables.scss';
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px;
+  margin: 100px auto 0;
+  padding: 30px 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 5px rgba(variables.$main-color, 0.5);
+}
+
+.login__title {
+  @include mixins.h1;
+  margin-bottom: 25px;
+  color: variables.$main-color;
+}
+
+.login__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 350px;
+}
+
+.login__error {
+  @include mixins.text;
+  color: variables.$error-color;
+}
+
+.login__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.login__button {
+  @include mixins.button;
+  display: block;
+  width: fit-content;
+}

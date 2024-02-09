@@ -1,0 +1,64 @@
+@use './variables.scss';
+
+// button
+
+@mixin button {
+  @include text;
+  padding: 9px 30px;
+  text-align: center;
+  color: white;
+  background-color: variables.$main-color;
+  border-radius: 10px;
+}
+
+// text
+
+@mixin h1 {
+  font-family: "Circe", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+@mixin h2 {
+  font-family: "Circe", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+@mixin h3 {
+  font-family: "Circe", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+@mixin nav-text {
+  font-family: "Circe", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+@mixin text {
+  font-family: "Circe", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@mixin input-text {
+  font-family: "Circe", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+@mixin placeholder {
+  font-family: "Circe", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  opacity: 0.7;
+}
